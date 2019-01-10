@@ -15,13 +15,13 @@ def CallId(user):
 class Accounts:
     def __init__(self):
         # Get and store a list of users and user permissions
-        # users         = self.__readInput()
-        users = [ 
-            "matt d",
-            "bob d",
-            "joey a",
-            "janice a"
-        ]
+        users         = self.__readInput()
+        # users = [ 
+        #     "matt d",
+        #     "bob d",
+        #     "joey a",
+        #     "janice a"
+        # ]
         self.users    = [ ]
         self.admins   = [ ]
         self.defaults = [ ]
@@ -33,6 +33,10 @@ class Accounts:
 
     # __readInput (private) - Read users input of usernames and permissions
     def __readInput(self):
+        print("enter usernames with permissions ('a' for admin, 'd' for default). then type 'done'. ex: ")
+        print("alice a")
+        print("bob d")
+        print("done")
         users = [ ]
         while True:
             _input = input()

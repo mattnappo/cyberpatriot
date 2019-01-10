@@ -11,6 +11,7 @@ def CallId(user):
     except subprocess.CalledProcessError as e:
         # print("[!] fatal error to find id (user does not exist)")
         return ""
+
 class Accounts:
     def __init__(self):
         # Get and store a list of users and user permissions
@@ -88,6 +89,11 @@ class Accounts:
                 print("[!] unauthorized user '" + default + "' has admin privileges")
             else:
                 print("[ ] default user '" + default + "' does not have admin privileges")
+        print("")
+
+    # CheckExtraUsers - Check for extra user accounts
+    def CheckExtraUsers(self):
+        pass
     
     """    END PUBLIC FUNCTIONS    """
 
@@ -97,5 +103,4 @@ def SecureAccounts():
     accounts.CheckAllUsersExist()
     accounts.CheckAdminsAreAdmin()
     accounts.CheckDefaultsAreDefault()
-
-SecureAccounts()
+    # accounts.CheckExtraUsers()

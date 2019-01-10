@@ -33,18 +33,24 @@ class Accounts:
 
     # __readInput (private) - Read users input of usernames and permissions
     def __readInput(self):
-        print("enter usernames with permissions ('a' for admin, 'd' for default). then type 'done'. ex: ")
-        print("alice a")
-        print("bob d")
-        print("done")
-        users = [ ]
-        while True:
-            _input = input()
-            if _input == "done":
-                break
-            else:
-                users.append(_input)
-        return users
+        # print("enter usernames with permissions ('a' for admin, 'd' for default). then type 'done'. ex: ")
+        # print("alice a")
+        # print("bob d")
+        # print("done")
+        # users = [ ]
+        # while True:
+        #     _input = input()
+        #     if _input == "done":
+        #         break
+        #     else:
+        #         users.append(_input)
+        # return users
+        with open("File Location", "r") as f:
+            userData= f.readlines
+        #when I figure the formatting of data, it should be super easy
+        #most functions become obsolete once we do this
+        #We should read line by line and parse (I beleive it's seperated by a : but I'm not sure)
+        
     
     # __parseUsers (private) - Parse the list of users inputted by the user
     def __parseUsers(self, users):

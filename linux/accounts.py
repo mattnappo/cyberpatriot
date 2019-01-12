@@ -16,7 +16,7 @@ class Accounts:
     def __init__(self):
         # Get and store a list of users and user permissions
         users         = self.__readInput()
-        users         = self.__readFile()
+        # users         = self.__readFile()
         self.users    = [ ]
         self.admins   = [ ]
         self.defaults = [ ]
@@ -43,7 +43,7 @@ class Accounts:
         
     # __readFile (private) - Read from a file the users and their permissions
     def __readFile(self):
-        with open("File Location", "r") as f:
+        with open("", "r") as f:
             userData = f.readlines()
         #when I figure the formatting of data, it should be super easy
         #most functions become obsolete once we do this
